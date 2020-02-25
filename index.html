@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>System Criptogaphy</title>
+    <!-- carregando bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .card ul li {
+            display: block;
+        }
+        
+        .card ul {
+            margin: 50px 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="alert">
+
+    </div>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body mt-5">
+                <div id="criptORdecript">
+                    <ul>
+                        <form action="/upload" method="post" enctype="multipart/form-data">
+                            <li>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroupFileAddon01">Arquivo</span>
+                                    </div>
+                                    <div class="custom-file">
+                                        <input type="file" name="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                        <label class="custom-file-label" for="inputGroupFile01">Carrege o Arquivo</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><button onclick="upfile()" type="submit" class="btn btn-info mt-1">Enviar</button></li>
+                        </form>
+                        <label for="action" class="mt-3">Escolha a opção</label>
+                        <select name="action" id="action" class="form-control">
+                                <option value="null">Selecione</option>
+                                <option value="cript">Cryptography</option>
+                                <option value="decript">Decriptography</option>
+                             </select>
+                        </li>
+                        <li><button onclick="action()" class="btn btn-success mt-4">Criptogaphy or Decriptography</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function ation() {
+            const fs = require('fs')
+            const crypto = require('crypto')
+
+            const alg = 'aes-256-ctr'
+            const pwd = 'senha123'
+
+            var action = document.querySelector('#action').value
+                //document.write(action)
+            if (action == 'cript') {
+                //document.write('opt cript')
+
+            }
+            if (action == 'decrypt') {
+
+            } else {
+                document.write('Opção não selecionanda')
+            }
+
+        }
+    </script>
+</body>
+
+</html>

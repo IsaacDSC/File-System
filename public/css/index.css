@@ -1,0 +1,11 @@
+        h1 {
+            text-align: center;
+        }
+        
+        .card ul li {
+            display: block;
+        }
+        
+        .card ul {
+            margin: 50px 20%;
+        }
